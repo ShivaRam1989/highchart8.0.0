@@ -1,56 +1,18 @@
 ﻿requirejs.config({
     paths: {
         'text': '../lib/require/text',
-        'durandal':'../lib/durandal/js',
-        'plugins' : '../lib/durandal/js/plugins',
-        'transitions' : '../lib/durandal/js/transitions',
+        'durandal': '../lib/durandal/js',
+        'plugins': '../lib/durandal/js/plugins',
+        'transitions': '../lib/durandal/js/transitions',
         'knockout': '../lib/knockout/knockout-3.4.0',
         'bootstrap': '../lib/bootstrap/js/bootstrap',
         'jquery': '../lib/jquery/jquery-1.9.1',
-        //chart
-        //'chart': '../lib/chart/highstock/highstock',
-        'highcharts': '../lib/chart/highchart/highcharts'
-        //'chartmore': 'lib/chart/highchart/highcharts-more',
-        //'chart3d': 'lib/chart/highchart/highcharts-3d',
-        //'chartexport': 'lib/chart/modules/exporting',
-        //'chart-noData-display': 'lib/chart/modules/no-data-to-display',
-        //'chart-heatmap': 'lib/chart/modules/heatmap',
-        //'chart-treemap': 'lib/chart/modules/treemap',
-        //'chart-offline-export': 'lib/chart/modules/offline-exporting'
+        'highcharts': '../lib/chart/highstock/'
     },
-    shim: {
-        'bootstrap': {
-            deps: ['jquery'],
-            exports: 'jQuery'
-        },
-        "highcharts": {
-            exports: "Highcharts"
-        }
-        //"chartmore": {
-        //    deps: ["chart"],
-        //    exports: "Highcharts.Chart"
-        //},
-        //"chart-heatmap": {
-        //    deps: ["chart"],
-        //    exports: "Highcharts.Chart"
-        //},
-        //"chart-treemap": {
-        //    deps: ["chart"],
-        //    exports: "Highcharts.Chart"
-        //},
-        //"chartexport": {
-        //    deps: ["chart"],
-        //    exports: "Highcharts"
-        //},
-        //"chart-offline-export": {
-        //    deps: ["chart"],
-        //    exports: "Highcharts.Chart"
-        //},
-        //"chart-noData-display": {
-        //    deps: ["chart"],
-        //    exports: "Highcharts"
-        //}
-    }
+    packages: [{
+        name: 'highcharts',
+        main: 'highstock'
+    }]
 });
 
 define(['durandal/system', 'durandal/app', 'durandal/viewLocator', 'bootstrap'], function (system, app, viewLocator) {
