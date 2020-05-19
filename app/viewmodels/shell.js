@@ -8,8 +8,7 @@
         },
         activate: function () {
             router.map([
-                { route: '', title:'Welcome', moduleId: 'viewmodels/welcome', nav: true },
-                { route: 'flickr', moduleId: 'viewmodels/flickr', nav: true }
+                { route: '', title:'Highcharts 8.0.0', moduleId: 'viewmodels/welcome', nav: true }
             ]).buildNavigationModel();
             
             return router.activate();
